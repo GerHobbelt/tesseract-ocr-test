@@ -2,8 +2,13 @@
 #include <stdio.h>
 #include <tesseract/baseapi.h>
 
-int main()
-{
+
+
+#if defined(BUILD_MONOLITHIC)
+#  define main(cnt, arr) tesseract_basicAPI_test_main(cnt, arr)
+#endif
+
+int main(int argc, const char **argv) {
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
     // Initialize tesseract-ocr with English
     if (api->Init("../../tessdata", "eng")) {
