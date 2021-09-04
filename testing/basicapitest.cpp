@@ -8,7 +8,7 @@
 #  define main(cnt, arr) tesseract_basicAPI_test_main(cnt, arr)
 #endif
 
-int main(int argc, const char **argv) {
+int main(int argc, const char** argv) {
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
     // Initialize tesseract-ocr with English
     if (api->Init("../../tessdata", "eng")) {
