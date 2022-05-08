@@ -5,10 +5,10 @@
 
 
 #if defined(BUILD_MONOLITHIC)
-#  define main(cnt, arr) tesseract_basicAPI_test_main(cnt, arr)
+#  define main tesseract_basicAPI_test_main
 #endif
 
-int main(int argc, const char** argv) {
+int main(void) {
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
     // Initialize tesseract-ocr with English
     if (api->Init("../../tessdata", "eng")) {
