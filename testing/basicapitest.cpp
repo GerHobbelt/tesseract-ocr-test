@@ -53,7 +53,8 @@ int main(int argc, const char **argv) {
 	pixDestroy(&image);
 	api->End();
     delete api;
-	tesseract::CleanGlobalDawgCache();
+
+	tesseract::TessBaseAPI::ClearPersistentCache();
 
     return 0;
 }
