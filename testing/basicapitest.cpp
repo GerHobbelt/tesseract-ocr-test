@@ -25,6 +25,11 @@ static bool fileExists(const char *path) {
 #endif
 
 int main(int argc, const char **argv) {
+	if (argc < 2) {
+		fprintf(stderr, "Missing testfilepath argument.\n");
+		return 1;
+	}
+	
 	const char *testfilepath = argv[1];
 	if (!testfilepath || !*testfilepath) {
 		testfilepath = TESTFILE_PATHPREFIX "../test/testing/phototest.tif";
