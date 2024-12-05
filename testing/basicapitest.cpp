@@ -1,9 +1,7 @@
 #include <leptonica/allheaders.h>
 #include <tesseract/baseapi.h>
 
-#if defined(BUILD_MONOLITHIC)
 #include "monolithic_tests.h"
-#endif
 
 #include <stdio.h>
 
