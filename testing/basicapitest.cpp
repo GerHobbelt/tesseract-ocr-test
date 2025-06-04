@@ -39,7 +39,7 @@ int main(int argc, const char **argv) {
 
     tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
     // Initialize tesseract-ocr with English
-    if (api->InitSimple("../../tessdata", "eng")) {
+    if (api->Init("../../tessdata", "eng")) {
         fprintf(stderr, "Could not initialize tesseract.\n");
         return 1;
     }
